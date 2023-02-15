@@ -1,0 +1,56 @@
+{
+  "info": {
+    "_postman_id": "13b95f09-fc05-494f-a072-95e61fe8a111",
+    "name": "Serverless Location Service",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "752706"
+  },
+  "item": [
+    {
+      "name": "POST Create Customer",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"firstName\": \"Lee\",\n    \"surname\": \"Gilmore\",\n    \"addressLineOne\": \"Janet Nash House\",\n    \"postCode\": \"DH7 8RJ\"\n\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://restApiId.execute-api.region.amazonaws.com/prod/customers/",
+          "protocol": "https",
+          "host": ["restApiId", "execute-api", "region", "amazonaws", "com"],
+          "path": ["prod", "customers", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST Create Order",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"productId\": \"kebab-1\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://restApiId.execute-api.region.amazonaws.com/prod/customers/customerId/orders",
+          "protocol": "https",
+          "host": ["restApiId", "execute-api", "region", "amazonaws", "com"],
+          "path": ["prod", "customers", "customerId", "orders"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
